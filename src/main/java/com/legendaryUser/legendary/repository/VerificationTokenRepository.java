@@ -14,6 +14,10 @@ import java.util.Optional;
 
 @Repository
 public interface VerificationTokenRepository extends JpaRepository<VerificationToken, Long> {
+
+    //Custom Queries: Added methods for security operations like updating failed attempts and locking users
+    //Transaction Management: Proper @Transactional and @Modifying annotations for write operations
+
     Optional<VerificationToken> findByToken(String token);
     Optional<VerificationToken> findByUserId(Long userId);
 

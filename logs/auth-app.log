@@ -237,3 +237,254 @@ Action:
 
 Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
 
+2025-10-21T13:30:28.733+01:00  INFO 9332 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 9332 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-21T13:30:28.737+01:00  INFO 9332 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T13:30:30.429+01:00  INFO 9332 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T13:30:30.549+01:00  INFO 9332 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
+2025-10-21T13:30:31.628+01:00  INFO 9332 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T13:30:31.664+01:00  INFO 9332 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T13:30:31.665+01:00  INFO 9332 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T13:30:31.768+01:00  INFO 9332 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-21T13:30:31.769+01:00  INFO 9332 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2903 ms
+2025-10-21T13:30:32.040+01:00  INFO 9332 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T13:30:32.379+01:00  INFO 9332 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67f9cb52
+2025-10-21T13:30:32.381+01:00  INFO 9332 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T13:30:32.448+01:00  INFO 9332 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T13:30:32.575+01:00  INFO 9332 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T13:30:32.659+01:00  INFO 9332 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T13:30:33.791+01:00  INFO 9332 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T13:30:33.983+01:00  INFO 9332 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T13:30:34.969+01:00  INFO 9332 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.VerificationToken (class must be instantiated by Interceptor)
+2025-10-21T13:30:35.016+01:00  INFO 9332 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.OtpToken (class must be instantiated by Interceptor)
+2025-10-21T13:30:35.031+01:00  INFO 9332 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.User (class must be instantiated by Interceptor)
+2025-10-21T13:30:35.315+01:00  INFO 9332 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T13:30:35.320+01:00  INFO 9332 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:30:35.757+01:00  INFO 9332 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T13:30:36.744+01:00  WARN 9332 --- [legendary] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailService': Unsatisfied dependency expressed through field 'mailSender': No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-10-21T13:30:36.744+01:00  INFO 9332 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:30:36.748+01:00  INFO 9332 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T13:30:36.761+01:00  INFO 9332 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T13:30:36.770+01:00  INFO 9332 --- [legendary] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-21T13:30:36.782+01:00  INFO 9332 --- [legendary] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-21T13:30:36.819+01:00 ERROR 9332 --- [legendary] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mailSender in com.legendaryUser.legendary.service.EmailService required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+
+2025-10-21T13:36:00.634+01:00  INFO 8900 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 8900 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-21T13:36:00.639+01:00  INFO 8900 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T13:36:02.218+01:00  INFO 8900 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T13:36:02.358+01:00  INFO 8900 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 3 JPA repository interfaces.
+2025-10-21T13:36:03.547+01:00  INFO 8900 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T13:36:03.621+01:00  INFO 8900 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T13:36:03.622+01:00  INFO 8900 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T13:36:03.724+01:00  INFO 8900 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-21T13:36:03.724+01:00  INFO 8900 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2959 ms
+2025-10-21T13:36:04.042+01:00  INFO 8900 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T13:36:04.400+01:00  INFO 8900 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a216eb4
+2025-10-21T13:36:04.403+01:00  INFO 8900 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T13:36:04.479+01:00  INFO 8900 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T13:36:04.595+01:00  INFO 8900 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T13:36:04.674+01:00  INFO 8900 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T13:36:05.169+01:00  INFO 8900 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T13:36:05.338+01:00  INFO 8900 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T13:36:06.302+01:00  INFO 8900 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.VerificationToken (class must be instantiated by Interceptor)
+2025-10-21T13:36:06.336+01:00  INFO 8900 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.OtpToken (class must be instantiated by Interceptor)
+2025-10-21T13:36:06.351+01:00  INFO 8900 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.User (class must be instantiated by Interceptor)
+2025-10-21T13:36:06.529+01:00  INFO 8900 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T13:36:06.533+01:00  INFO 8900 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:36:07.086+01:00  INFO 8900 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T13:36:08.038+01:00  WARN 8900 --- [legendary] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailService': Unsatisfied dependency expressed through field 'templateEngine': No qualifying bean of type 'org.thymeleaf.TemplateEngine' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-10-21T13:36:08.039+01:00  INFO 8900 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:36:08.045+01:00  INFO 8900 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T13:36:08.055+01:00  INFO 8900 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T13:36:08.059+01:00  INFO 8900 --- [legendary] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-21T13:36:08.083+01:00  INFO 8900 --- [legendary] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-21T13:36:08.132+01:00 ERROR 8900 --- [legendary] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field templateEngine in com.legendaryUser.legendary.service.EmailService required a bean of type 'org.thymeleaf.TemplateEngine' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.thymeleaf.TemplateEngine' in your configuration.
+
+2025-10-21T13:38:40.655+01:00  INFO 14152 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 14152 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-21T13:38:40.662+01:00  INFO 14152 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T13:38:42.130+01:00  INFO 14152 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T13:38:42.281+01:00  INFO 14152 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 3 JPA repository interfaces.
+2025-10-21T13:38:43.516+01:00  INFO 14152 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T13:38:43.535+01:00  INFO 14152 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T13:38:43.536+01:00  INFO 14152 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T13:38:43.627+01:00  INFO 14152 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-21T13:38:43.628+01:00  INFO 14152 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2827 ms
+2025-10-21T13:38:43.895+01:00  INFO 14152 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T13:38:44.283+01:00  INFO 14152 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e4d40ea
+2025-10-21T13:38:44.286+01:00  INFO 14152 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T13:38:44.403+01:00  INFO 14152 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T13:38:44.501+01:00  INFO 14152 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T13:38:44.592+01:00  INFO 14152 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T13:38:45.172+01:00  INFO 14152 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T13:38:45.363+01:00  INFO 14152 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T13:38:46.212+01:00  INFO 14152 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.VerificationToken (class must be instantiated by Interceptor)
+2025-10-21T13:38:46.242+01:00  INFO 14152 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.OtpToken (class must be instantiated by Interceptor)
+2025-10-21T13:38:46.254+01:00  INFO 14152 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.User (class must be instantiated by Interceptor)
+2025-10-21T13:38:46.397+01:00  INFO 14152 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T13:38:46.400+01:00  INFO 14152 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:38:46.977+01:00  INFO 14152 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T13:38:47.845+01:00  WARN 14152 --- [legendary] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-21T13:38:47.930+01:00  WARN 14152 --- [legendary] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T13:38:48.891+01:00  INFO 14152 --- [legendary] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T13:38:49.084+01:00 DEBUG 14152 --- [legendary] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-21T13:38:49.187+01:00  INFO 14152 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-10-21T13:38:49.205+01:00  INFO 14152 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Started LegendaryApplication in 9.5 seconds (process running for 10.077)
+2025-10-21T13:40:14.772+01:00  INFO 14152 --- [legendary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T13:40:14.945+01:00  INFO 14152 --- [legendary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T13:40:14.949+01:00  INFO 14152 --- [legendary] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:40:14.950+01:00  INFO 14152 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T13:40:14.959+01:00  INFO 14152 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T13:40:18.653+01:00  INFO 5064 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 5064 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-21T13:40:18.658+01:00  INFO 5064 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T13:40:20.000+01:00  INFO 5064 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T13:40:20.149+01:00  INFO 5064 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 3 JPA repository interfaces.
+2025-10-21T13:40:21.373+01:00  INFO 5064 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T13:40:21.389+01:00  INFO 5064 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T13:40:21.389+01:00  INFO 5064 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T13:40:21.500+01:00  INFO 5064 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-21T13:40:21.501+01:00  INFO 5064 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2747 ms
+2025-10-21T13:40:21.781+01:00  INFO 5064 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T13:40:22.175+01:00  INFO 5064 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d354a3e
+2025-10-21T13:40:22.178+01:00  INFO 5064 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T13:40:22.260+01:00  INFO 5064 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T13:40:22.375+01:00  INFO 5064 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T13:40:22.446+01:00  INFO 5064 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T13:40:22.936+01:00  INFO 5064 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T13:40:23.094+01:00  INFO 5064 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T13:40:23.980+01:00  INFO 5064 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.VerificationToken (class must be instantiated by Interceptor)
+2025-10-21T13:40:24.017+01:00  INFO 5064 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.OtpToken (class must be instantiated by Interceptor)
+2025-10-21T13:40:24.030+01:00  INFO 5064 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.User (class must be instantiated by Interceptor)
+2025-10-21T13:40:24.191+01:00  INFO 5064 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T13:40:24.195+01:00  INFO 5064 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:40:24.678+01:00  INFO 5064 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T13:40:25.622+01:00  WARN 5064 --- [legendary] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailService': Unsatisfied dependency expressed through field 'mailSender': No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-10-21T13:40:25.623+01:00  INFO 5064 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:40:25.630+01:00  INFO 5064 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T13:40:25.641+01:00  INFO 5064 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T13:40:25.650+01:00  INFO 5064 --- [legendary] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-21T13:40:25.673+01:00  INFO 5064 --- [legendary] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-21T13:40:25.716+01:00 ERROR 5064 --- [legendary] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mailSender in com.legendaryUser.legendary.service.EmailService required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+
+2025-10-21T13:40:43.315+01:00  INFO 11600 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 11600 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-21T13:40:43.321+01:00  INFO 11600 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T13:40:44.867+01:00  INFO 11600 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T13:40:45.027+01:00  INFO 11600 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 3 JPA repository interfaces.
+2025-10-21T13:40:46.251+01:00  INFO 11600 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T13:40:46.276+01:00  INFO 11600 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T13:40:46.276+01:00  INFO 11600 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T13:40:46.369+01:00  INFO 11600 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-21T13:40:46.370+01:00  INFO 11600 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2952 ms
+2025-10-21T13:40:46.642+01:00  INFO 11600 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T13:40:46.950+01:00  INFO 11600 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73a6cc79
+2025-10-21T13:40:46.952+01:00  INFO 11600 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T13:40:47.044+01:00  INFO 11600 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T13:40:47.150+01:00  INFO 11600 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T13:40:47.268+01:00  INFO 11600 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T13:40:47.859+01:00  INFO 11600 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T13:40:48.094+01:00  INFO 11600 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T13:40:49.056+01:00  INFO 11600 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.VerificationToken (class must be instantiated by Interceptor)
+2025-10-21T13:40:49.091+01:00  INFO 11600 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.OtpToken (class must be instantiated by Interceptor)
+2025-10-21T13:40:49.105+01:00  INFO 11600 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.User (class must be instantiated by Interceptor)
+2025-10-21T13:40:49.279+01:00  INFO 11600 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T13:40:49.284+01:00  INFO 11600 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T13:40:49.760+01:00  INFO 11600 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T13:40:50.823+01:00  WARN 11600 --- [legendary] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-21T13:40:50.897+01:00  WARN 11600 --- [legendary] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T13:40:51.763+01:00  INFO 11600 --- [legendary] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T13:40:51.966+01:00 DEBUG 11600 --- [legendary] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-21T13:40:52.070+01:00  INFO 11600 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-10-21T13:40:52.086+01:00  INFO 11600 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Started LegendaryApplication in 9.662 seconds (process running for 10.194)
+2025-10-21T20:19:30.069+01:00  WARN 11600 --- [legendary] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h36m18s92ms382µs700ns).
+2025-10-21T20:56:42.879+01:00  INFO 11600 --- [legendary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T20:56:43.051+01:00  INFO 11600 --- [legendary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T20:56:43.082+01:00  INFO 11600 --- [legendary] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T20:56:43.145+01:00  INFO 11600 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T20:56:43.150+01:00  INFO 11600 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

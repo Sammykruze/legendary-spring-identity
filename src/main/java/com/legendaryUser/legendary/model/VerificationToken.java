@@ -2,7 +2,9 @@ package com.legendaryUser.legendary.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -10,6 +12,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "verification_tokens")
 @Data
+@Setter
+@Getter
 @NoArgsConstructor
 public class VerificationToken {
     private static final int EXPIRATION_HOURS = 24;
@@ -36,6 +40,34 @@ public class VerificationToken {
         this.token = token;
         this.user = user;
         this.expiryDate = calculateExpiryDate(EXPIRATION_HOURS);
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public LocalDateTime getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(LocalDateTime expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
     private LocalDateTime calculateExpiryDate(int expiryTimeInHours) {

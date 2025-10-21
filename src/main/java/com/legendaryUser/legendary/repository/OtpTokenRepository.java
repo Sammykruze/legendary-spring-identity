@@ -13,6 +13,10 @@ import java.util.Optional;
 
 @Repository
 public interface OtpTokenRepository extends JpaRepository<OtpToken, Long> {
+
+    //Custom Queries: Added methods for security operations like updating failed attempts and locking users
+    //Transaction Management: Proper @Transactional and @Modifying annotations for write operations
+
     Optional<OtpToken> findByToken(String token);
     Optional<OtpToken> findByUserId(Long userId);
 
