@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login OTP</title>
+</head>
+<body>
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+  <h2>Your Login OTP Code</h2>
+  <p>Hello <span th:text="${name}">User</span>,</p>
+  <p>Your One-Time Password (OTP) for login is:</p>
+
+  <div style="text-align: center; margin: 30px 0;">
+    <div style="font-size: 32px; font-weight: bold; letter-spacing: 5px;
+                       background-color: #f8f9fa; padding: 20px; border-radius: 8px;
+                       border: 2px dashed #dee2e6;">
+      <span th:text="${otp}">123456</span>
+    </div>
+  </div>
+
+  <p>Enter this code on the login page to complete your authentication.</p>
+
+  <p style="color: #dc3545; font-weight: bold;">
+    ⚠️ This OTP is valid for 10 minutes only. Do not share it with anyone.
+  </p>
+
+  <p>If you didn't request this OTP, please ignore this email and consider changing your password.</p>
+
+  <hr>
+  <p style="color: #666; font-size: 12px;">
+    This is an automated message. Please do not reply to this email.
+  </p>
+</div>
+</body>
+</html>
