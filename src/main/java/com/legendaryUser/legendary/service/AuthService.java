@@ -66,52 +66,135 @@ public class AuthService {
 
     @Transactional
     public void registerUser(RegisterRequest registerRequest, String clientIp) {
-        if (userRepository.existsByEmail(registerRequest.getEmail())) {
-            throw new EmailAlreadyExistsException("Email is already in use!");
+        logger.info("Starting registration for email: {}, IP: {}", registerRequest.getEmail(), clientIp);
+
+        try {
+            // 1. Check if email already exists
+            if (userRepository.existsByEmail(registerRequest.getEmail())) {
+                logger.warn("Registration failed: Email already exists - {}", registerRequest.getEmail());
+                throw new EmailAlreadyExistsException("Email is already in use!");
+            }
+
+            // 2. Check rate limiting
+            Bucket bucket = rateLimitService.resolveBucket(clientIp);
+            if (!bucket.tryConsume(1)) {
+                logger.warn("Rate limit exceeded for IP: {}", clientIp);
+                throw new RateLimitExceededException("Too many registration attempts. Please try again later.");
+            }
+
+            // 3. Create and save user
+            User user = new User();
+            user.setEmail(registerRequest.getEmail());
+            user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
+            user.setFirstName(registerRequest.getFirstName());
+            user.setLastName(registerRequest.getLastName());
+            user.setEnabled(false);
+            user.setCreatedAt(LocalDateTime.now());
+            user.setUpdatedAt(LocalDateTime.now());
+
+            User savedUser = userRepository.save(user);
+            logger.info("User saved to database: {}", savedUser.getEmail());
+
+            // 4. Create and save verification token
+            String token = emailService.generateEmailVerificationToken();
+            VerificationToken verificationToken = new VerificationToken(token, savedUser);
+            verificationToken.setExpiryDate(LocalDateTime.now().plusHours(24));
+            verificationToken.setCreatedAt(LocalDateTime.now());
+
+            verificationTokenRepository.save(verificationToken);
+            logger.info("Verification token created for user: {}", savedUser.getEmail());
+
+            // 5. Send verification email with better error handling
+            try {
+                emailService.sendEmailVerification(
+                        savedUser.getEmail(),
+                        token,
+                        savedUser.getFirstName()
+                );
+                logger.info("Verification email sent to: {}", savedUser.getEmail());
+
+            } catch (Exception emailException) {
+                logger.error("Failed to send verification email to {}: {}",
+                        savedUser.getEmail(), emailException.getMessage());
+                // Don't throw exception here - user is already created
+                // You might want to implement a retry mechanism for email sending
+            }
+
+            logger.info("Registration completed successfully for: {}", savedUser.getEmail());
+
+        } catch (EmailAlreadyExistsException | RateLimitExceededException e) {
+            // Re-throw business exceptions
+            logger.error("Registration failed for {}: {}", registerRequest.getEmail(), e.getMessage());
+            throw e;
+        } catch (Exception e) {
+            logger.error("Unexpected registration error for {}: {}",
+                    registerRequest.getEmail(), e.getMessage());
+            throw new RuntimeException("Registration failed due to unexpected error: " + e.getMessage(), e);
+        }
+    }
+
+    @Transactional
+    public void verifyEmail(String token) {
+        logger.info("Starting email verification for token: {}", token);
+
+        try {
+            VerificationToken verificationToken = verificationTokenRepository.findByToken(token)
+                    .orElseThrow(() -> {
+                        logger.warn("Invalid verification token: {}", token);
+                        return new InvalidTokenException("Invalid verification token");
+                    });
+
+            if (verificationToken.isExpired()) {
+                logger.warn("Expired verification token: {}", token);
+                verificationTokenRepository.delete(verificationToken);
+                throw new TokenExpiredException("Verification token has expired");
+            }
+
+            User user = verificationToken.getUser();
+            user.setEnabled(true);
+            user.setUpdatedAt(LocalDateTime.now());
+            userRepository.save(user);
+
+            verificationTokenRepository.delete(verificationToken);
+
+            logger.info("Email verified successfully for user: {}", user.getEmail());
+
+        } catch (InvalidTokenException | TokenExpiredException e) {
+            // Re-throw business exceptions
+            logger.error("Email verification failed for token {}: {}", token, e.getMessage());
+            throw e;
+        } catch (Exception e) {
+            logger.error("Unexpected email verification error for token {}: {}",
+                    token, e.getMessage());
+            throw new RuntimeException("Email verification failed: " + e.getMessage(), e);
+        }
+    }
+
+    public void resendVerificationEmail(String email, String clientIp) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        if (user.isEnabled()) {
+            throw new RuntimeException("Email is already verified");
         }
 
-        // Check rate limiting
-        Bucket bucket = rateLimitService.resolveBucket(clientIp);
+        // Check rate limiting for resend
+        Bucket bucket = rateLimitService.resolveBucket(clientIp + "-resend");
         if (!bucket.tryConsume(1)) {
-            throw new RateLimitExceededException("Too many registration attempts. Please try again later.");
+            throw new RateLimitExceededException("Too many resend attempts");
         }
 
-        User user = new User();
-        user.setEmail(registerRequest.getEmail());
-        user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
-        user.setFirstName(registerRequest.getFirstName());
-        user.setLastName(registerRequest.getLastName());
-        user.setEnabled(false);
+        // Delete old tokens
+        verificationTokenRepository.deleteByUser(user);
 
-        userRepository.save(user);
-
+        // Create new token and send email
         String token = emailService.generateEmailVerificationToken();
         VerificationToken verificationToken = new VerificationToken(token, user);
         verificationTokenRepository.save(verificationToken);
 
         emailService.sendEmailVerification(user.getEmail(), token, user.getFirstName());
-
-        logger.info("User registered successfully: {}", user.getEmail());
     }
 
-    @Transactional
-    public void verifyEmail(String token) {
-        VerificationToken verificationToken = verificationTokenRepository.findByToken(token)
-                .orElseThrow(() -> new InvalidTokenException("Invalid verification token"));
-
-        if (verificationToken.isExpired()) {
-            verificationTokenRepository.delete(verificationToken);
-            throw new TokenExpiredException("Verification token has expired");
-        }
-
-        User user = verificationToken.getUser();
-        user.setEnabled(true);
-        userRepository.save(user);
-
-        verificationTokenRepository.delete(verificationToken);
-
-        logger.info("Email verified successfully for user: {}", user.getEmail());
-    }
 
     @Transactional
     public void requestOtp(LoginRequest loginRequest, String clientIp) {

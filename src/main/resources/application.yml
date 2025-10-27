@@ -2,65 +2,45 @@ server:
   port: 8080
   servlet:
     context-path: /api
-  # Enable HTTPS in production
-  ssl:
-    enabled: false # Set to true in production with proper certificate
-    key-store: classpath:keystore.p12
-    key-store-password: changeit
-    key-store-type: PKCS12
-    key-alias: tomcat
+  #ssl:
+   # enabled: false
+    #key-store: classpath:keystore.p12
+    #key-store-password: changeit
+    #key-store-type: PKCS12
+    #key-alias: tomcat
 
-# Database Connection
 spring:
+  application:
+    name: legendary
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     url: jdbc:mysql://localhost:3306/legendaryuser?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: root
     password: Nackonel1@
     driver-class-name: com.mysql.cj.jdbc.Driver
-
-# JPA & Hibernate
-jpa:
-  properties:
+  jpa:
     hibernate:
-      dialect: org.hibernate.dialect.MySQLDialect
-      format_sql: true
-  hibernate:
-    ddl-auto: update
-  show-sql: true
-
-
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: ${EMAIL_USERNAME:}
-    password: ${EMAIL_PASSWORD:}
+      ddl-auto: update
+    generate-ddl: true
     properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-        transport:
-          protocol: smtp
-
-  security:
-    oauth2:
-      client:
-        registration:
-        # Optional: Add OAuth2 providers later
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
 
 # Custom application properties
 app:
   jwt:
-    secret: ${JWT_SECRET:mySecretKey1235678qwertyuiopjhgfdsfghj94gfertyuio2345jds5kjhgfd457654fghfd} # ${}
-    expiration-ms: 86400000 # 24 hours
+    secret: mySecretKey1235678qwertyuiopjhgfdsfghj94gfertyuio2345jds5kjhgfd457654fghfd
+    expiration-ms: 86400000
   frontend:
     url: http://localhost:3000
   email:
     from: no-reply@yourapp.com
   security:
     max-login-attempts: 5
-    lock-time-duration: 1800000 # 30 minutes in milliseconds
+    lock-time-duration: 1800000
     otp:
       expiration-minutes: 10
       length: 6
@@ -70,9 +50,46 @@ app:
 # Logging configuration
 logging:
   level:
-    com.example.authapp: DEBUG
+    com.legendaryUser.legendary: DEBUG
     org.springframework.security: DEBUG
+    com.legendaryUser.legendary.security: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
   file:
     name: logs/auth-app.log
+
+  logging:
+    level:
+      org:
+        springframework:
+          security: DEBUG
+          web: DEBUG
+      com:
+        myapp: DEBUG
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "samuelkunle.sk@gmail.com"
+    password: "ktev hzgu dfhf hpmr"  # ⚠️ Use APP PASSWORD, not regular password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connection-timeout: 5000
+          timeout: 5000
+          write-timeout: 5000
+        debug: true  # Optional: for debugging email issues
+
+    logging:
+      level:
+        org.springframework.mail: DEBUG    # Shows the SMTP conversation
+        com.sun.mail: DEBUG                # Shows low-level JavaMail details
+        com.zaxxer.hikari: INFO            # (Optional) Reduces DB noise
+        org.hibernate: INFO                # (Optional) Reduces DB noise
+
+
+

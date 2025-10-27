@@ -46,10 +46,10 @@ public class User {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(nullable = false)
+    @Column//(nullable = false)
     private boolean enabled = false;
 
-    @Column(name = "account_non_locked", nullable = false)
+    @Column(name = "account_non_locked") //, nullable = false)
     private boolean accountNonLocked = true;
 
     @Column(name = "failed_attempts")
@@ -59,7 +59,7 @@ public class User {
     private LocalDateTime lockTime;
 
     @CreationTimestamp
-    @Column(name = "created_at", updatable = false)
+    @Column(name = "created_at") //, updatable = false)
     private LocalDateTime createdAt;
 
     @UpdateTimestamp

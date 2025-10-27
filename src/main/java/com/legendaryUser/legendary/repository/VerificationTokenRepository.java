@@ -1,6 +1,7 @@
 package com.legendaryUser.legendary.repository;
 
 
+import com.legendaryUser.legendary.model.User;
 import com.legendaryUser.legendary.model.VerificationToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -28,7 +29,7 @@ public interface VerificationTokenRepository extends JpaRepository<VerificationT
 
     @Transactional
     @Modifying
-    @Query("DELETE FROM VerificationToken vt WHERE vt.user.email = :email")
-    void deleteByUserEmail(@Param("email") String email);
+    @Query("DELETE FROM VerificationToken vt WHERE vt.user = :user")
+    void deleteByUser(@Param("user") User user);
 }
 

@@ -1,7 +1,5 @@
 package com.legendaryUser.legendary.security;
 
-import com.legendaryUser.legendary.security.CsrfConfig;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,6 +30,11 @@ public class WebSecurityConfig {
     @Autowired
     private AuthEntryPointJwt unauthorizedHandler;
 
+    @Autowired
+    private CookieCsrfTokenRepository cookieCsrfTokenRepository;
+    @Autowired
+    private CsrfTokenRequestAttributeHandler csrfTokenRequestAttributeHandler;
+
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
@@ -59,41 +62,16 @@ public class WebSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-
-        // Configure CSRF
-        configureCsrf(http);
-
-        http.authorizeHttpRequests(auth ->
-                auth.requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/api/test/**").permitAll()
-                        .anyRequest().authenticated()
-        );
-
-        http.authenticationProvider(authenticationProvider());
-        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .csrf(csrf -> csrf.disable()) // ← DISABLE CSRF COMPLETELY
+                .authorizeHttpRequests(auth ->
+                        auth.requestMatchers("/auth/**").permitAll()
+                                .requestMatchers("/api/test/**").permitAll()
+                                .anyRequest().authenticated()
+                )
+                .addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
-    }
-
-    @Bean
-    public CookieCsrfTokenRepository cookieCsrfTokenRepository() {
-        CookieCsrfTokenRepository repository = CookieCsrfTokenRepository.withHttpOnlyFalse();
-        repository.setCookiePath("/");
-        return repository;
-    }
-
-    @Bean
-    public CsrfTokenRequestAttributeHandler csrfTokenRequestAttributeHandler() {
-        return new CsrfTokenRequestAttributeHandler();
-    }
-
-    private void configureCsrf(HttpSecurity http) throws Exception {
-        http.csrf(csrf -> csrf
-                .csrfTokenRepository(cookieCsrfTokenRepository())
-                .csrfTokenRequestHandler(csrfTokenRequestAttributeHandler())
-                .ignoringRequestMatchers("/api/auth/**") // Disable CSRF for auth endpoints
-        );
     }
 
     @Bean

@@ -1,102 +1,22 @@
-2025-10-22T10:41:47.390+01:00  INFO 8740 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 8740 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
-2025-10-22T10:41:47.399+01:00  INFO 8740 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-10-22T10:41:48.467+01:00  WARN 8740 --- [legendary] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cookieCsrfTokenRepository' defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=webSecurityConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]] for bean 'cookieCsrfTokenRepository' since there is already [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=csrfConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class]] bound.
-2025-10-22T10:41:48.481+01:00  INFO 8740 --- [legendary] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-22T10:41:48.502+01:00 ERROR 8740 --- [legendary] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'cookieCsrfTokenRepository', defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-2025-10-22T10:44:11.125+01:00  INFO 6012 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 6012 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
-2025-10-22T10:44:11.128+01:00  INFO 6012 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-10-22T10:44:11.992+01:00  WARN 6012 --- [legendary] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cookieCsrfTokenRepository' defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=webSecurityConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]] for bean 'cookieCsrfTokenRepository' since there is already [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=csrfConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class]] bound.
-2025-10-22T10:44:12.002+01:00  INFO 6012 --- [legendary] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-22T10:44:12.027+01:00 ERROR 6012 --- [legendary] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'cookieCsrfTokenRepository', defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-2025-10-22T10:51:06.138+01:00  INFO 11828 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 11828 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
-2025-10-22T10:51:06.144+01:00  INFO 11828 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-10-22T10:51:07.207+01:00  WARN 11828 --- [legendary] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'passwordEncoder' defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=webSecurityConfig; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]] for bean 'passwordEncoder' since there is already [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=additionalSecurityConfig; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/AdditionalSecurityConfig.class]] bound.
-2025-10-22T10:51:07.217+01:00  INFO 11828 --- [legendary] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-22T10:51:07.243+01:00 ERROR 11828 --- [legendary] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'passwordEncoder', defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/legendaryUser/legendary/security/AdditionalSecurityConfig.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-2025-10-22T21:23:48.972+01:00  INFO 15868 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 15868 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
-2025-10-22T21:23:48.979+01:00  INFO 15868 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-10-22T21:23:50.125+01:00  WARN 15868 --- [legendary] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cookieCsrfTokenRepository' defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=webSecurityConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]] for bean 'cookieCsrfTokenRepository' since there is already [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=csrfConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class]] bound.
-2025-10-22T21:23:50.160+01:00  INFO 15868 --- [legendary] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-10-22T21:23:50.392+01:00 ERROR 15868 --- [legendary] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'cookieCsrfTokenRepository', defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-2025-10-22T21:25:14.614+01:00  INFO 3644 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 3644 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
-2025-10-22T21:25:14.625+01:00  INFO 3644 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-10-22T21:25:15.616+01:00  INFO 3644 --- [legendary] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cookieCsrfTokenRepository' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=csrfConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=webSecurityConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]]
-2025-10-22T21:25:15.618+01:00  INFO 3644 --- [legendary] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'csrfTokenRequestAttributeHandler' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=csrfConfig; factoryMethodName=csrfTokenRequestAttributeHandler; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=webSecurityConfig; factoryMethodName=csrfTokenRequestAttributeHandler; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]]
-2025-10-22T21:25:15.983+01:00  INFO 3644 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-22T21:25:16.088+01:00  INFO 3644 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
-2025-10-22T21:25:17.091+01:00  INFO 3644 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-10-22T21:25:17.110+01:00  INFO 3644 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-22T21:25:17.111+01:00  INFO 3644 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
-2025-10-22T21:25:17.200+01:00  INFO 3644 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2025-10-22T21:25:17.200+01:00  INFO 3644 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2449 ms
-2025-10-22T21:25:17.385+01:00  INFO 3644 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-22T21:25:17.663+01:00  INFO 3644 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ea7bc4
-2025-10-22T21:25:17.666+01:00  INFO 3644 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-22T21:25:17.745+01:00  INFO 3644 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-22T21:25:17.846+01:00  INFO 3644 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
-2025-10-22T21:25:17.924+01:00  INFO 3644 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-22T21:25:18.387+01:00  INFO 3644 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-22T21:25:18.562+01:00  INFO 3644 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-10-27T12:34:37.479+01:00  INFO 1808 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 1808 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-27T12:34:37.490+01:00 DEBUG 1808 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-27T12:34:37.492+01:00  INFO 1808 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T12:34:39.191+01:00  INFO 1808 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T12:34:39.445+01:00  INFO 1808 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 205 ms. Found 3 JPA repository interfaces.
+2025-10-27T12:34:41.031+01:00  INFO 1808 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-27T12:34:41.053+01:00  INFO 1808 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T12:34:41.053+01:00  INFO 1808 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T12:34:41.182+01:00  INFO 1808 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-27T12:34:41.182+01:00  INFO 1808 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3544 ms
+2025-10-27T12:34:41.551+01:00  INFO 1808 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T12:34:41.908+01:00  INFO 1808 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T12:34:42.097+01:00  INFO 1808 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T12:34:43.015+01:00  INFO 1808 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T12:34:43.103+01:00  INFO 1808 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T12:34:43.691+01:00  INFO 1808 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c7d8a4
+2025-10-27T12:34:43.694+01:00  INFO 1808 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T12:34:43.810+01:00  WARN 1808 --- [legendary] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-27T12:34:43.835+01:00  INFO 1808 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 9.0.1
@@ -104,45 +24,78 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-10-22T21:25:19.584+01:00  INFO 3644 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.VerificationToken (class must be instantiated by Interceptor)
-2025-10-22T21:25:19.620+01:00  INFO 3644 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.OtpToken (class must be instantiated by Interceptor)
-2025-10-22T21:25:19.856+01:00  INFO 3644 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-22T21:25:19.860+01:00  INFO 3644 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-22T21:25:20.420+01:00  INFO 3644 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-22T21:25:21.554+01:00  INFO 3644 --- [legendary] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-10-22T21:25:21.555+01:00  WARN 3644 --- [legendary] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2025-10-22T21:25:21.736+01:00  WARN 3644 --- [legendary] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-22T21:25:22.208+01:00 DEBUG 3644 --- [legendary] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-10-22T21:25:22.604+01:00  INFO 3644 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
-2025-10-22T21:25:22.621+01:00  INFO 3644 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Started LegendaryApplication in 8.844 seconds (process running for 9.401)
-2025-10-22T21:25:22.634+01:00  INFO 3644 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled rate limit cache cleanup completed successfully
-2025-10-22T21:25:22.851+01:00  WARN 3644 --- [legendary] [scheduling-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1146, SQLState: 42S02
-2025-10-22T21:25:22.851+01:00 ERROR 3644 --- [legendary] [scheduling-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'legendaryuser.verification_tokens' doesn't exist
-2025-10-22T21:25:22.862+01:00 ERROR 3644 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled token cleanup failed: JDBC exception executing SQL [delete vt1_0 from verification_tokens vt1_0 where vt1_0.expiry_date<?] [Table 'legendaryuser.verification_tokens' doesn't exist] [n/a]; SQL [n/a]
-2025-10-22T22:06:04.000+01:00  INFO 3644 --- [legendary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-22T22:06:04.173+01:00  INFO 3644 --- [legendary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-10-22T22:06:04.190+01:00  INFO 3644 --- [legendary] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-22T22:06:04.207+01:00  INFO 3644 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-22T22:06:04.217+01:00  INFO 3644 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-22T22:06:07.112+01:00  INFO 7352 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 7352 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
-2025-10-22T22:06:07.117+01:00  INFO 7352 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-10-22T22:06:08.134+01:00  INFO 7352 --- [legendary] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cookieCsrfTokenRepository' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=csrfConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=webSecurityConfig; factoryMethodName=cookieCsrfTokenRepository; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]]
-2025-10-22T22:06:08.134+01:00  INFO 7352 --- [legendary] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'csrfTokenRequestAttributeHandler' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=csrfConfig; factoryMethodName=csrfTokenRequestAttributeHandler; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/CsrfConfig.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=webSecurityConfig; factoryMethodName=csrfTokenRequestAttributeHandler; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/legendaryUser/legendary/security/WebSecurityConfig.class]]
-2025-10-22T22:06:08.489+01:00  INFO 7352 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-22T22:06:08.606+01:00  INFO 7352 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 3 JPA repository interfaces.
-2025-10-22T22:06:09.593+01:00  INFO 7352 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-10-22T22:06:09.622+01:00  INFO 7352 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-22T22:06:09.622+01:00  INFO 7352 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
-2025-10-22T22:06:09.720+01:00  INFO 7352 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2025-10-22T22:06:09.720+01:00  INFO 7352 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2488 ms
-2025-10-22T22:06:09.939+01:00  INFO 7352 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-22T22:06:10.043+01:00  INFO 7352 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
-2025-10-22T22:06:10.118+01:00  INFO 7352 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-22T22:06:10.529+01:00  INFO 7352 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-22T22:06:10.574+01:00  INFO 7352 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-22T22:06:10.867+01:00  INFO 7352 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1308ef19
-2025-10-22T22:06:10.871+01:00  INFO 7352 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-22T22:06:11.037+01:00  INFO 7352 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-10-27T12:34:45.538+01:00  INFO 1808 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T12:34:45.836+01:00  INFO 1808 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T12:34:46.252+01:00  INFO 1808 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T12:34:48.248+01:00 DEBUG 1808 --- [legendary] [main] c.l.legendary.security.AuthTokenFilter   : Filter 'authTokenFilter' configured for use
+2025-10-27T12:34:48.248+01:00 DEBUG 1808 --- [legendary] [main] c.l.legendary.security.AuthTokenFilter   : Filter 'authenticationJwtTokenFilter' configured for use
+2025-10-27T12:34:48.958+01:00  INFO 1808 --- [legendary] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-27T12:34:48.958+01:00  WARN 1808 --- [legendary] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-27T12:34:49.304+01:00  WARN 1808 --- [legendary] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T12:34:50.441+01:00 DEBUG 1808 --- [legendary] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-27T12:34:51.299+01:00  INFO 1808 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-10-27T12:34:51.324+01:00  INFO 1808 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Started LegendaryApplication in 14.879 seconds (process running for 15.91)
+2025-10-27T12:34:51.600+01:00  INFO 1808 --- [legendary] [scheduling-1] c.l.legendary.service.AuthService        : Cleaned up expired tokens
+2025-10-27T12:34:51.616+01:00  INFO 1808 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled token cleanup completed successfully
+2025-10-27T12:34:51.616+01:00  INFO 1808 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled rate limit cache cleanup completed successfully
+2025-10-27T12:35:14.698+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T12:35:14.698+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T12:35:14.706+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-10-27T12:35:14.763+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-27T12:35:14.787+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-27T12:35:14.795+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-27T12:35:15.133+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] c.l.legendary.controller.AuthController  : Received registration request for: samuelkunl215@gmail.com
+2025-10-27T12:35:15.133+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] c.l.legendary.controller.AuthController  : Client IP: 0:0:0:0:0:0:0:1
+2025-10-27T12:35:15.141+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] c.l.legendary.service.AuthService        : 🔹 Starting registration for email: samuelkunl215@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-10-27T12:35:16.226+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] c.l.legendary.service.AuthService        : User saved to database: samuelkunl215@gmail.com
+2025-10-27T12:35:16.234+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] c.l.legendary.service.AuthService        : Verification token created for user: samuelkunl215@gmail.com
+2025-10-27T12:35:21.943+01:00 ERROR 1808 --- [legendary] [http-nio-8080-exec-2] c.l.legendary.service.AuthService        : Failed to send verification email to samuelkunl215@gmail.com: Authentication failed
+2025-10-27T12:35:21.943+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] c.l.legendary.service.AuthService        : ✅ Registration completed successfully for: samuelkunl215@gmail.com
+2025-10-27T12:35:21.966+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-2] c.l.legendary.controller.AuthController  : Registration request processed successfully for: samuelkunl215@gmail.com
+2025-10-27T12:35:37.392+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-27T12:35:37.392+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-27T12:35:37.392+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-27T12:35:37.392+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.controller.AuthController  : Received registration request for: samuelkunle215@gmail.com
+2025-10-27T12:35:37.392+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.controller.AuthController  : Client IP: 0:0:0:0:0:0:0:1
+2025-10-27T12:35:37.392+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : 🔹 Starting registration for email: samuelkunle215@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-10-27T12:35:38.005+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : User saved to database: samuelkunle215@gmail.com
+2025-10-27T12:35:38.013+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : Verification token created for user: samuelkunle215@gmail.com
+2025-10-27T12:35:41.590+01:00 ERROR 1808 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : Failed to send verification email to samuelkunle215@gmail.com: Authentication failed
+2025-10-27T12:35:41.590+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : ✅ Registration completed successfully for: samuelkunle215@gmail.com
+2025-10-27T12:35:41.607+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.controller.AuthController  : Registration request processed successfully for: samuelkunle215@gmail.com
+2025-10-27T12:43:14.954+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-27T12:43:14.954+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-27T12:43:14.954+01:00 DEBUG 1808 --- [legendary] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-27T12:43:14.954+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-6] c.l.legendary.controller.AuthController  : Received registration request for: samuelkunle215@gmail.com
+2025-10-27T12:43:14.954+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-6] c.l.legendary.controller.AuthController  : Client IP: 0:0:0:0:0:0:0:1
+2025-10-27T12:43:14.965+01:00  INFO 1808 --- [legendary] [http-nio-8080-exec-6] c.l.legendary.service.AuthService        : 🔹 Starting registration for email: samuelkunle215@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-10-27T12:43:14.981+01:00  WARN 1808 --- [legendary] [http-nio-8080-exec-6] c.l.legendary.service.AuthService        : Registration failed: Email already exists - samuelkunle215@gmail.com
+2025-10-27T12:43:14.981+01:00 ERROR 1808 --- [legendary] [http-nio-8080-exec-6] c.l.legendary.service.AuthService        : Registration failed for samuelkunle215@gmail.com: Email is already in use!
+2025-10-27T12:43:14.981+01:00  WARN 1808 --- [legendary] [http-nio-8080-exec-6] c.l.legendary.controller.AuthController  : Registration failed - Email already exists: samuelkunle215@gmail.com
+2025-10-27T12:43:29.431+01:00  INFO 1808 --- [legendary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T12:43:29.816+01:00  INFO 1808 --- [legendary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T12:43:29.836+01:00  INFO 1808 --- [legendary] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T12:43:29.848+01:00  INFO 1808 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T12:43:29.870+01:00  INFO 1808 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T12:43:36.957+01:00  INFO 13880 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 13880 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-27T12:43:36.961+01:00 DEBUG 13880 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-27T12:43:36.973+01:00  INFO 13880 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T12:43:38.868+01:00  INFO 13880 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T12:43:39.015+01:00  INFO 13880 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 3 JPA repository interfaces.
+2025-10-27T12:43:40.630+01:00  INFO 13880 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-27T12:43:40.663+01:00  INFO 13880 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T12:43:40.663+01:00  INFO 13880 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T12:43:40.800+01:00  INFO 13880 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-27T12:43:40.804+01:00  INFO 13880 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3712 ms
+2025-10-27T12:43:41.218+01:00  INFO 13880 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T12:43:41.374+01:00  INFO 13880 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T12:43:41.505+01:00  INFO 13880 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T12:43:42.450+01:00  INFO 13880 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T12:43:42.732+01:00  INFO 13880 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T12:43:43.643+01:00  INFO 13880 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f5f5bc9
+2025-10-27T12:43:43.658+01:00  INFO 13880 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T12:43:43.893+01:00  WARN 13880 --- [legendary] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-27T12:43:43.987+01:00  INFO 13880 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 9.0.1
@@ -150,22 +103,145 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-10-22T22:06:12.092+01:00  INFO 7352 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.VerificationToken (class must be instantiated by Interceptor)
-2025-10-22T22:06:12.130+01:00  INFO 7352 --- [legendary] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.legendaryUser.legendary.model.OtpToken (class must be instantiated by Interceptor)
-2025-10-22T22:06:12.351+01:00  INFO 7352 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-22T22:06:12.882+01:00  INFO 7352 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-22T22:06:13.240+01:00  INFO 7352 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-22T22:06:14.423+01:00  INFO 7352 --- [legendary] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-10-22T22:06:14.423+01:00  WARN 7352 --- [legendary] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2025-10-22T22:06:14.573+01:00  WARN 7352 --- [legendary] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-22T22:06:15.036+01:00 DEBUG 7352 --- [legendary] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-10-22T22:06:15.427+01:00  INFO 7352 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
-2025-10-22T22:06:15.442+01:00  INFO 7352 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Started LegendaryApplication in 9.209 seconds (process running for 9.808)
-2025-10-22T22:06:15.554+01:00  INFO 7352 --- [legendary] [scheduling-1] c.l.legendary.service.AuthService        : Cleaned up expired tokens
-2025-10-22T22:06:15.558+01:00  INFO 7352 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled token cleanup completed successfully
-2025-10-22T22:06:15.559+01:00  INFO 7352 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled rate limit cache cleanup completed successfully
-2025-10-22T22:49:15.068+01:00  INFO 7352 --- [legendary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-22T22:49:15.225+01:00  INFO 7352 --- [legendary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-10-22T22:49:15.240+01:00  INFO 7352 --- [legendary] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-22T22:49:15.256+01:00  INFO 7352 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-22T22:49:15.256+01:00  INFO 7352 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T12:43:47.418+01:00  INFO 13880 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T12:43:47.731+01:00  INFO 13880 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T12:43:48.924+01:00  INFO 13880 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T12:43:51.293+01:00 DEBUG 13880 --- [legendary] [main] c.l.legendary.security.AuthTokenFilter   : Filter 'authTokenFilter' configured for use
+2025-10-27T12:43:51.293+01:00 DEBUG 13880 --- [legendary] [main] c.l.legendary.security.AuthTokenFilter   : Filter 'authenticationJwtTokenFilter' configured for use
+2025-10-27T12:43:51.919+01:00  INFO 13880 --- [legendary] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-27T12:43:51.919+01:00  WARN 13880 --- [legendary] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-27T12:43:52.215+01:00  WARN 13880 --- [legendary] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T12:43:53.264+01:00 DEBUG 13880 --- [legendary] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-27T12:43:54.123+01:00  INFO 13880 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-10-27T12:43:54.155+01:00  INFO 13880 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Started LegendaryApplication in 18.436 seconds (process running for 19.394)
+2025-10-27T12:43:54.170+01:00  INFO 13880 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled rate limit cache cleanup completed successfully
+2025-10-27T12:43:54.374+01:00  INFO 13880 --- [legendary] [scheduling-1] c.l.legendary.service.AuthService        : Cleaned up expired tokens
+2025-10-27T12:43:54.391+01:00  INFO 13880 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled token cleanup completed successfully
+2025-10-27T13:39:05.901+01:00  WARN 13880 --- [legendary] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m21s382ms689µs200ns).
+2025-10-27T13:47:00.213+01:00  INFO 13880 --- [legendary] [scheduling-1] c.l.legendary.service.AuthService        : Cleaned up expired tokens
+2025-10-27T13:47:00.229+01:00  INFO 13880 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled token cleanup completed successfully
+2025-10-27T14:16:30.574+01:00  INFO 13880 --- [legendary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T14:16:30.890+01:00  INFO 13880 --- [legendary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T14:16:30.918+01:00  INFO 13880 --- [legendary] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T14:16:30.946+01:00  INFO 13880 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T14:16:30.958+01:00  INFO 13880 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T14:16:37.225+01:00  INFO 14772 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 14772 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-27T14:16:37.229+01:00 DEBUG 14772 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-27T14:16:37.229+01:00  INFO 14772 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T14:16:39.099+01:00  INFO 14772 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T14:16:39.232+01:00  INFO 14772 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 3 JPA repository interfaces.
+2025-10-27T14:16:40.817+01:00  INFO 14772 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-27T14:16:40.849+01:00  INFO 14772 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T14:16:40.849+01:00  INFO 14772 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T14:16:40.994+01:00  INFO 14772 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-27T14:16:40.994+01:00  INFO 14772 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3654 ms
+2025-10-27T14:16:41.306+01:00  INFO 14772 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T14:16:41.445+01:00  INFO 14772 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T14:16:41.550+01:00  INFO 14772 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T14:16:42.118+01:00  INFO 14772 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T14:16:42.213+01:00  INFO 14772 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T14:16:42.585+01:00  INFO 14772 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@716ae973
+2025-10-27T14:16:42.587+01:00  INFO 14772 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T14:16:42.758+01:00  WARN 14772 --- [legendary] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-27T14:16:42.826+01:00  INFO 14772 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T14:16:45.361+01:00  INFO 14772 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T14:16:45.543+01:00  INFO 14772 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T14:16:46.209+01:00  INFO 14772 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T14:16:47.603+01:00 DEBUG 14772 --- [legendary] [main] c.l.legendary.security.AuthTokenFilter   : Filter 'authTokenFilter' configured for use
+2025-10-27T14:16:47.603+01:00 DEBUG 14772 --- [legendary] [main] c.l.legendary.security.AuthTokenFilter   : Filter 'authenticationJwtTokenFilter' configured for use
+2025-10-27T14:16:47.963+01:00  INFO 14772 --- [legendary] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-27T14:16:47.963+01:00  WARN 14772 --- [legendary] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-27T14:16:48.186+01:00  WARN 14772 --- [legendary] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T14:16:48.832+01:00 DEBUG 14772 --- [legendary] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-27T14:16:49.424+01:00  INFO 14772 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-10-27T14:16:49.451+01:00  INFO 14772 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Started LegendaryApplication in 13.516 seconds (process running for 14.283)
+2025-10-27T14:16:49.683+01:00  INFO 14772 --- [legendary] [scheduling-1] c.l.legendary.service.AuthService        : Cleaned up expired tokens
+2025-10-27T14:16:49.692+01:00  INFO 14772 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled token cleanup completed successfully
+2025-10-27T14:16:49.698+01:00  INFO 14772 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled rate limit cache cleanup completed successfully
+2025-10-27T14:17:36.543+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T14:17:36.543+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T14:17:36.543+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-27T14:17:36.599+01:00 DEBUG 14772 --- [legendary] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-27T14:17:36.623+01:00 DEBUG 14772 --- [legendary] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-27T14:17:36.623+01:00 DEBUG 14772 --- [legendary] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-27T14:17:37.055+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] c.l.legendary.controller.AuthController  : Received registration request for: oyefemi2004@gmail.com
+2025-10-27T14:17:37.055+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] c.l.legendary.controller.AuthController  : Client IP: 0:0:0:0:0:0:0:1
+2025-10-27T14:17:37.063+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] c.l.legendary.service.AuthService        : 🔹 Starting registration for email: oyefemi2004@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-10-27T14:17:38.179+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] c.l.legendary.service.AuthService        : User saved to database: oyefemi2004@gmail.com
+2025-10-27T14:17:38.185+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] c.l.legendary.service.AuthService        : Verification token created for user: oyefemi2004@gmail.com
+2025-10-27T14:17:43.742+01:00 ERROR 14772 --- [legendary] [http-nio-8080-exec-1] c.l.legendary.service.AuthService        : Failed to send verification email to oyefemi2004@gmail.com: Authentication failed
+2025-10-27T14:17:43.742+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] c.l.legendary.service.AuthService        : ✅ Registration completed successfully for: oyefemi2004@gmail.com
+2025-10-27T14:17:43.791+01:00  INFO 14772 --- [legendary] [http-nio-8080-exec-1] c.l.legendary.controller.AuthController  : Registration request processed successfully for: oyefemi2004@gmail.com
+2025-10-27T14:28:24.392+01:00  INFO 14772 --- [legendary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T14:28:24.940+01:00  INFO 14772 --- [legendary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T14:28:25.003+01:00  INFO 14772 --- [legendary] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T14:28:25.050+01:00  INFO 14772 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T14:28:25.111+01:00  INFO 14772 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T14:28:34.862+01:00  INFO 11556 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Starting LegendaryApplication using Java 17.0.12 with PID 11556 (C:\ALL_CODES\legendaryUserSpring\target\classes started by Owner in C:\ALL_CODES\legendaryUserSpring)
+2025-10-27T14:28:34.872+01:00 DEBUG 11556 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-27T14:28:34.874+01:00  INFO 11556 --- [legendary] [main] c.l.legendary.LegendaryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T14:28:38.349+01:00  INFO 11556 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T14:28:38.688+01:00  INFO 11556 --- [legendary] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 295 ms. Found 3 JPA repository interfaces.
+2025-10-27T14:28:40.723+01:00  INFO 11556 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-27T14:28:40.770+01:00  INFO 11556 --- [legendary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T14:28:40.771+01:00  INFO 11556 --- [legendary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T14:28:40.953+01:00  INFO 11556 --- [legendary] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-10-27T14:28:40.954+01:00  INFO 11556 --- [legendary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5886 ms
+2025-10-27T14:28:41.376+01:00  INFO 11556 --- [legendary] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T14:28:41.512+01:00  INFO 11556 --- [legendary] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T14:28:41.625+01:00  INFO 11556 --- [legendary] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T14:28:42.318+01:00  INFO 11556 --- [legendary] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T14:28:42.401+01:00  INFO 11556 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T14:28:42.829+01:00  INFO 11556 --- [legendary] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4aeaff64
+2025-10-27T14:28:42.833+01:00  INFO 11556 --- [legendary] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T14:28:43.068+01:00  WARN 11556 --- [legendary] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-27T14:28:43.269+01:00  INFO 11556 --- [legendary] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.0.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T14:28:45.465+01:00  INFO 11556 --- [legendary] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T14:28:45.629+01:00  INFO 11556 --- [legendary] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T14:28:46.100+01:00  INFO 11556 --- [legendary] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T14:28:47.994+01:00 DEBUG 11556 --- [legendary] [main] c.l.legendary.security.AuthTokenFilter   : Filter 'authTokenFilter' configured for use
+2025-10-27T14:28:47.994+01:00 DEBUG 11556 --- [legendary] [main] c.l.legendary.security.AuthTokenFilter   : Filter 'authenticationJwtTokenFilter' configured for use
+2025-10-27T14:28:48.451+01:00  INFO 11556 --- [legendary] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-27T14:28:48.451+01:00  WARN 11556 --- [legendary] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-27T14:28:48.648+01:00  WARN 11556 --- [legendary] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T14:28:49.239+01:00 DEBUG 11556 --- [legendary] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-27T14:28:49.770+01:00  INFO 11556 --- [legendary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-10-27T14:28:49.801+01:00  INFO 11556 --- [legendary] [main] c.l.legendary.LegendaryApplication       : Started LegendaryApplication in 16.251 seconds (process running for 17.167)
+2025-10-27T14:28:49.812+01:00  INFO 11556 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled rate limit cache cleanup completed successfully
+2025-10-27T14:28:49.935+01:00  INFO 11556 --- [legendary] [scheduling-1] c.l.legendary.service.AuthService        : Cleaned up expired tokens
+2025-10-27T14:28:49.939+01:00  INFO 11556 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled token cleanup completed successfully
+2025-10-27T14:29:06.322+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T14:29:06.322+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T14:29:06.322+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-27T14:29:06.452+01:00 DEBUG 11556 --- [legendary] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-27T14:29:06.513+01:00 DEBUG 11556 --- [legendary] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-27T14:29:06.527+01:00 DEBUG 11556 --- [legendary] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-27T14:29:07.191+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.controller.AuthController  : Received registration request for: oreoluwafarodoye@gmail.com
+2025-10-27T14:29:07.191+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.controller.AuthController  : Client IP: 0:0:0:0:0:0:0:1
+2025-10-27T14:29:07.191+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : 🔹 Starting registration for email: oreoluwafarodoye@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-10-27T14:29:08.179+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : User saved to database: oreoluwafarodoye@gmail.com
+2025-10-27T14:29:08.190+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : Verification token created for user: oreoluwafarodoye@gmail.com
+2025-10-27T14:29:13.108+01:00 ERROR 11556 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : Failed to send verification email to oreoluwafarodoye@gmail.com: Authentication failed
+2025-10-27T14:29:13.108+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.service.AuthService        : ✅ Registration completed successfully for: oreoluwafarodoye@gmail.com
+2025-10-27T14:29:13.158+01:00  INFO 11556 --- [legendary] [http-nio-8080-exec-3] c.l.legendary.controller.AuthController  : Registration request processed successfully for: oreoluwafarodoye@gmail.com
+2025-10-27T15:28:50.024+01:00  INFO 11556 --- [legendary] [scheduling-1] c.l.legendary.service.AuthService        : Cleaned up expired tokens
+2025-10-27T15:28:50.039+01:00  INFO 11556 --- [legendary] [scheduling-1] c.l.l.scheduler.TokenCleanupScheduler    : Scheduled token cleanup completed successfully
+2025-10-27T16:11:47.161+01:00  INFO 11556 --- [legendary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T16:11:47.615+01:00  INFO 11556 --- [legendary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T16:11:47.662+01:00  INFO 11556 --- [legendary] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T16:11:47.740+01:00  INFO 11556 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T16:11:47.771+01:00  INFO 11556 --- [legendary] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
