@@ -13,6 +13,7 @@ import org.thymeleaf.context.Context;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+
 import java.util.UUID;
 
 @Service
@@ -30,6 +31,19 @@ public class EmailService {
 
     @Autowired
     private TemplateEngine templateEngine;
+
+    @Async
+    public void sendTestEmail(String to, String name) {
+        Context context = new Context();
+        context.setVariable("name", name);
+        context.setVariable("message", "This is a test email to verify your SMTP configuration is working correctly!");
+
+        String subject = "Test Email - SMTP Configuration Working!";
+        String htmlContent = templateEngine.process("email-test", context); // You'll need this template
+
+        sendEmail(to, subject, htmlContent);
+        logger.info("Test email triggered for: {}", to);
+    }
 
     @Async
     public void sendEmailVerification(String to, String token, String name) {
@@ -79,4 +93,3 @@ public class EmailService {
         return UUID.randomUUID().toString();
     }
 }
-

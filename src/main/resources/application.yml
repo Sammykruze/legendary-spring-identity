@@ -1,9 +1,9 @@
 server:
-  port: 8080
+  port: 8081
   servlet:
     context-path: /api
-  #ssl:
-   # enabled: false
+    #ssl:
+    #enabled: true
     #key-store: classpath:keystore.p12
     #key-store-password: changeit
     #key-store-type: PKCS12
@@ -21,7 +21,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     generate-ddl: true
     properties:
       hibernate:
@@ -29,7 +29,33 @@ spring:
         format_sql: true
     show-sql: true
 
-# Custom application properties
+  # MAIL CONFIGURATION
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: samuelkunle.sk@gmail.com
+    password: lqxsbriemleuawfw
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          # NUCLEAR OPTION - DISABLE ALL SSL CHECKS:
+          ssl:
+            trust: "*"
+          ssl-checkserveridentity: false
+        # GLOBAL SSL DISABLE:
+        smtp.ssl.trust: "*"
+        smtp.ssl.checkserveridentity: false
+        mail.smtp.ssl.trust: "*"
+        mail.smtp.ssl.checkserveridentity: false
+        connectiontimeout: 10000
+        timeout: 15000
+        writetimeout: 10000
+        debug: true
+
+
 app:
   jwt:
     secret: mySecretKey1235678qwertyuiopjhgfdsfghj94gfertyuio2345jds5kjhgfd457654fghfd
@@ -37,7 +63,7 @@ app:
   frontend:
     url: http://localhost:3000
   email:
-    from: no-reply@yourapp.com
+    from: samuel@hgwconsult.com.au
   security:
     max-login-attempts: 5
     lock-time-duration: 1800000
@@ -47,49 +73,35 @@ app:
     rate-limit:
       requests-per-hour: 5
 
+
 # Logging configuration
 logging:
   level:
     com.legendaryUser.legendary: DEBUG
     org.springframework.security: DEBUG
     com.legendaryUser.legendary.security: DEBUG
+
+    org:
+      springframework:
+        security: DEBUG
+        web: DEBUG
+    com:
+      myapp: DEBUG
+
+    org.springframework.mail: DEBUG
+    com.sun.mail: DEBUG
+    com.zaxxer.hikari: INFO
+    org.hibernate: INFO
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
   file:
     name: logs/auth-app.log
 
-  logging:
-    level:
-      org:
-        springframework:
-          security: DEBUG
-          web: DEBUG
-      com:
-        myapp: DEBUG
-
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: "samuelkunle.sk@gmail.com"
-    password: "ktev hzgu dfhf hpmr"  # ⚠️ Use APP PASSWORD, not regular password
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-            required: true
-          connection-timeout: 5000
-          timeout: 5000
-          write-timeout: 5000
-        debug: true  # Optional: for debugging email issues
-
-    logging:
-      level:
-        org.springframework.mail: DEBUG    # Shows the SMTP conversation
-        com.sun.mail: DEBUG                # Shows low-level JavaMail details
-        com.zaxxer.hikari: INFO            # (Optional) Reduces DB noise
-        org.hibernate: INFO                # (Optional) Reduces DB noise
-
-
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env
+  endpoint:
+    env:
+      enabled: true
