@@ -69,20 +69,26 @@ public class AuthService {
         logger.info("Starting registration for email: {}, IP: {}", registerRequest.getEmail(), clientIp);
 
         try {
-            // 1. Check if email already exists
             if (userRepository.existsByEmail(registerRequest.getEmail())) {
                 logger.warn("Registration failed: Email already exists - {}", registerRequest.getEmail());
                 throw new EmailAlreadyExistsException("Email is already in use!");
             }
 
-            // 2. Check rate limiting
+            String role = registerRequest.getRole();
+            if (role == null || role.trim().isEmpty()) {
+                role = "USER";
+            } else if (!"USER".equalsIgnoreCase(role) && !"ADMIN".equalsIgnoreCase(role)) {
+                logger.warn("Invalid role specified: {}. Defaulting to USER", role);
+                role = "USER";
+            }
+
+            // Rate limiting
             Bucket bucket = rateLimitService.resolveBucket(clientIp);
             if (!bucket.tryConsume(1)) {
                 logger.warn("Rate limit exceeded for IP: {}", clientIp);
                 throw new RateLimitExceededException("Too many registration attempts. Please try again later.");
             }
 
-            // 3. Create and save user
             User user = new User();
             user.setEmail(registerRequest.getEmail());
             user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
@@ -91,11 +97,12 @@ public class AuthService {
             user.setEnabled(false);
             user.setCreatedAt(LocalDateTime.now());
             user.setUpdatedAt(LocalDateTime.now());
+            user.setRole(role.toUpperCase());
 
             User savedUser = userRepository.save(user);
             logger.info("User saved to database: {}", savedUser.getEmail());
 
-            // 4. Create and save verification token
+            //Create and save verification token
             String token = emailService.generateEmailVerificationToken();
             VerificationToken verificationToken = new VerificationToken(token, savedUser);
             verificationToken.setExpiryDate(LocalDateTime.now().plusHours(24));
@@ -104,7 +111,7 @@ public class AuthService {
             verificationTokenRepository.save(verificationToken);
             logger.info("Verification token created for user: {}", savedUser.getEmail());
 
-            // 5. Send verification email with better error handling
+            //Send verification email with better error handling
             try {
                 emailService.sendEmailVerification(
                         savedUser.getEmail(),
@@ -116,8 +123,6 @@ public class AuthService {
             } catch (Exception emailException) {
                 logger.error("Failed to send verification email to {}: {}",
                         savedUser.getEmail(), emailException.getMessage());
-                // Don't throw exception here - user is already created
-                // You might want to implement a retry mechanism for email sending
             }
 
             logger.info("Registration completed successfully for: {}", savedUser.getEmail());
@@ -265,20 +270,20 @@ public class AuthService {
         user.resetFailedAttempts();
         userRepository.save(user);
 
-        // Authenticate user
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(otpRequest.getEmail(), "otp-based-auth"));
+        //Manually create authentication instead of using authenticationManager
+        UserPrincipal userPrincipal = UserPrincipal.create(user);
+        Authentication authentication = new UsernamePasswordAuthenticationToken(
+                userPrincipal, null, userPrincipal.getAuthorities());
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);
-
-        UserPrincipal userPrincipal = (UserPrincipal) authentication.getPrincipal();
 
         logger.info("User logged in successfully with OTP: {}", user.getEmail());
 
         return new AuthResponse(jwt, userPrincipal.getId(), userPrincipal.getUsername(),
                 user.getFirstName(), user.getLastName());
     }
+
 
     private String generateOtp() {
         Random random = new Random();
@@ -308,6 +313,33 @@ public class AuthService {
         verificationTokenRepository.deleteAllExpiredSince(now);
         otpTokenRepository.deleteAllExpiredSince(now);
         logger.info("Cleaned up expired tokens");
+    }
+
+    @Transactional
+    public void promoteToAdmin(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        user.setRole("ADMIN");
+        userRepository.save(user);
+        logger.info("User {} promoted to ADMIN", email);
+    }
+
+    @Transactional
+    public void demoteToUser(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        user.setRole("USER");
+        userRepository.save(user);
+        logger.info("User {} demoted to USER", email);
+    }
+
+    public boolean isAdmin(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        return "ADMIN".equalsIgnoreCase(user.getRole());
     }
 }
 

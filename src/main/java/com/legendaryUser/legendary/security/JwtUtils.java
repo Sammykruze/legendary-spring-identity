@@ -30,7 +30,8 @@ public class JwtUtils {
                 .setSubject((userPrincipal.getEmail()))
                 .setIssuedAt(new Date())
                 .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
-                .signWith(getSigningKey(), SignatureAlgorithm.HS256)
+                .signWith(getSigningKey()//, SignatureAlgorithm.HS256
+                        )
                 .compact();
     }
     public String getUserNameFromJwtToken(String token) {
@@ -64,8 +65,8 @@ public class JwtUtils {
     }
 
     private SecretKey getSigningKey() {
-        byte[] keyBytes = Decoders.BASE64.decode(jwtSecret);
-        return Keys.hmacShaKeyFor(keyBytes);
+        //byte[] keyBytes = Decoders.BASE64.decode(jwtSecret);
+        return Keys.hmacShaKeyFor(jwtSecret.getBytes());
     }
 }
 

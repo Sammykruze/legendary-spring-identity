@@ -66,6 +66,11 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @NotBlank
+    @Size(max = 20)
+    @Column(nullable = false)
+    private String role = "USER";
+
     public User() {
         this.createdAt = LocalDateTime.now();
     }
@@ -162,6 +167,14 @@ public class User {
 
     public void resetFailedAttempts() {
         this.failedAttempts = 0;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public void lockAccount() {

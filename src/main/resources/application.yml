@@ -58,7 +58,7 @@ spring:
 
 app:
   jwt:
-    secret: mySecretKey1235678qwertyuiopjhgfdsfghj94gfertyuio2345jds5kjhgfd457654fghfd
+    secret: bXlTZWNyZXRLZXkxMjM1Njc4cXdlcnR5dWlvcGpoZ2Zkc2ZnaGo5NGdmZXJ0eXVpbzIzNDVqZHM1a2poZ2ZkNDU3NjU0ZmdoZmQ=
     expiration-ms: 86400000
   frontend:
     url: http://localhost:3000

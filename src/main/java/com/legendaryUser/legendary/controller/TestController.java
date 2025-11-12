@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/test")
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class TestController {
 
@@ -27,5 +27,7 @@ public class TestController {
     public String adminAccess() {
         return "Admin Content.";
     }
+
+
 }
 

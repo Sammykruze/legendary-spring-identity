@@ -29,41 +29,39 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
+
         try {
-            String path = request.getRequestURI();
-
-            // Skip JWT validation for public endpoints
-            if (path.startsWith("/auth/") || path.startsWith("/api/test/")) {
-                // Just continue the filter chain without JWT processing
-                filterChain.doFilter(request, response);
-                return; // Exit after continuing the chain
-            }
-
-            // For protected endpoints, process JWT
             String jwt = parseJwt(request);
+            System.out.println("JWT Token: " + jwt);
+
             if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
                 String username = jwtUtils.getUserNameFromJwtToken(jwt);
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+
                 UsernamePasswordAuthenticationToken authentication =
                         new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         } catch (Exception e) {
-            logger.error("Cannot set user authentication: {}", e);
+            logger.error("Authentication error: {}", e.getMessage());
+            // Don't block here - let Spring Security handle authorization
         }
 
-        // This ensures the request continues to the controller for protected endpoints
         filterChain.doFilter(request, response);
     }
 
+
     private String parseJwt(HttpServletRequest request) {
         String headerAuth = request.getHeader("Authorization");
-
+        System.out.println("Authorization Header: " + headerAuth);
         if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer ")) {
-            return headerAuth.substring(7);
+            String token = headerAuth.substring(7);
+            System.out.println("Extracted JWT: " + token); // Debug
+            return token;
         }
 
+        System.out.println("No valid JWT found in header"); // Debug
         return null;
     }
 }

@@ -1,4 +1,4 @@
-package com.legendaryUser.legendary.security;
+/*package com.legendaryUser.legendary.security;
 
 
 import org.springframework.context.annotation.Bean;
@@ -25,3 +25,4 @@ public class AdditionalSecurityConfig implements WebMvcConfigurer {
     }
 }
 
+*/

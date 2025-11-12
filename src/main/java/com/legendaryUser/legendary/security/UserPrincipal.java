@@ -18,21 +18,31 @@ public class UserPrincipal implements UserDetails {
     private String email;
     @JsonIgnore
     private String password;
+    private boolean enabled;
+    private boolean accountNonLocked;
     private Collection<? extends GrantedAuthority> authorities;
 
-    public UserPrincipal(Long id, String email, String password, Collection<? extends GrantedAuthority> authorities) {
+    public UserPrincipal(Long id, String email, String password, boolean enabled, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.email = email;
         this.password = password;
+        this.enabled = enabled;
+        this.accountNonLocked = accountNonLocked;
         this.authorities = authorities;
     }
 
     public static UserPrincipal create(User user) {
+
+        String role = user.getRole().startsWith("ROLE_") ?
+                user.getRole() : "ROLE_" + user.getRole();
+
         return new UserPrincipal(
                 user.getId(),
                 user.getEmail(),
                 user.getPassword(),
-                Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"))
+                user.isEnabled(),          // <- Now uses the real value
+                user.isAccountNonLocked(), // <- Now uses the real value
+                Collections.singletonList(new SimpleGrantedAuthority(role))
         );
     }
     public String getEmail() {
@@ -70,7 +80,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+        return this.accountNonLocked;
     }
 
     @Override
@@ -80,7 +90,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return this.enabled;
     }
 
     @Override

@@ -40,104 +40,6 @@ public class AuthController {
         return ResponseEntity.ok("Test endpoint works!");
     }
 
-    /*@GetMapping("/test/email/send-test")
-    public ResponseEntity<?> sendTestEmail(@RequestParam String email,
-                                           @RequestParam(defaultValue = "Test User") String name) {
-        logger.info("Received test email request for: {}", email);
-
-        try {
-            emailService.sendTestEmail(email, name);
-
-            Map<String, Object> response = new HashMap<>();
-            response.put("success", true);
-            response.put("message", "Test email sent successfully! Check your inbox (and spam folder).");
-            response.put("email", email);
-            response.put("timestamp", System.currentTimeMillis());
-
-            logger.info("Test email triggered for: {}", email);
-            return ResponseEntity.ok().body(response);
-
-        } catch (Exception e) {
-            logger.error("Test email failed for {}: {}", email, e.getMessage(), e);
-
-            Map<String, Object> errorResponse = new HashMap<>();
-            errorResponse.put("success", false);
-            errorResponse.put("message", "Failed to send test email: " + e.getMessage());
-            errorResponse.put("email", email);
-            errorResponse.put("errorCode", "TEST_EMAIL_FAILED");
-            errorResponse.put("timestamp", System.currentTimeMillis());
-
-            return ResponseEntity.status(500).body(errorResponse);
-        }
-    }
-
-    @GetMapping("/test/email/send-verification")
-    public ResponseEntity<?> sendVerificationTest(@RequestParam String email,
-                                                  @RequestParam(defaultValue = "Test User") String name) {
-        logger.info("Received verification test request for: {}", email);
-
-        try {
-            String token = emailService.generateEmailVerificationToken();
-            emailService.sendEmailVerification(email, token, name);
-
-            Map<String, Object> response = new HashMap<>();
-            response.put("success", true);
-            response.put("message", "Verification test email sent successfully!");
-            response.put("email", email);
-            response.put("token", token);
-            response.put("timestamp", System.currentTimeMillis());
-
-            logger.info("Verification test email sent to: {}", email);
-            return ResponseEntity.ok().body(response);
-
-        } catch (Exception e) {
-            logger.error("Verification test email failed for {}: {}", email, e.getMessage(), e);
-
-            Map<String, Object> errorResponse = new HashMap<>();
-            errorResponse.put("success", false);
-            errorResponse.put("message", "Failed to send verification test email: " + e.getMessage());
-            errorResponse.put("email", email);
-            errorResponse.put("errorCode", "VERIFICATION_TEST_FAILED");
-            errorResponse.put("timestamp", System.currentTimeMillis());
-
-            return ResponseEntity.status(500).body(errorResponse);
-        }
-    }
-
-    @GetMapping("/test/email/send-otp")
-    public ResponseEntity<?> sendOtpTest(@RequestParam String email,
-                                         @RequestParam(defaultValue = "Test User") String name) {
-        logger.info("Received OTP test request for: {}", email);
-
-        try {
-            String otp = "123456"; // Example OTP for testing
-            emailService.sendOtpEmail(email, otp, name);
-
-            Map<String, Object> response = new HashMap<>();
-            response.put("success", true);
-            response.put("message", "OTP test email sent successfully!");
-            response.put("email", email);
-            response.put("otp", otp);
-            response.put("timestamp", System.currentTimeMillis());
-
-            logger.info("OTP test email sent to: {}", email);
-            return ResponseEntity.ok().body(response);
-
-        } catch (Exception e) {
-            logger.error("OTP test email failed for {}: {}", email, e.getMessage(), e);
-
-            Map<String, Object> errorResponse = new HashMap<>();
-            errorResponse.put("success", false);
-            errorResponse.put("message", "Failed to send OTP test email: " + e.getMessage());
-            errorResponse.put("email", email);
-            errorResponse.put("errorCode", "OTP_TEST_FAILED");
-            errorResponse.put("timestamp", System.currentTimeMillis());
-
-            return ResponseEntity.status(500).body(errorResponse);
-        }
-    }*/
-
-
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest registerRequest,
@@ -199,7 +101,7 @@ public class AuthController {
     }
 
 
-    @GetMapping("/verify")
+    @GetMapping("/verify-email")
     public ResponseEntity<?> verifyEmail(@RequestParam String token) {
         logger.info("Received email verification request for token: {}", token);
 
