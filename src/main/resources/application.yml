@@ -15,7 +15,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: ${DB_URL}
+    url: jdbc:mysql://localhost:3306/legendaryuser?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -41,7 +41,6 @@ spring:
           auth: true
           starttls:
             enable: true
-          # NUCLEAR OPTION - DISABLE ALL SSL CHECKS:
           ssl:
             trust: "*"
           ssl-checkserveridentity: false
