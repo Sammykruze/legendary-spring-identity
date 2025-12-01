@@ -16,8 +16,8 @@ spring:
     allow-bean-definition-overriding: true
   datasource:
     url: jdbc:mysql://localhost:3306/legendaryuser?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    username: root
+    password: Nackonel1@
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -33,8 +33,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    username: samuelkunle.sk@gmail.com
+    password: lqxsbriemleuawfw
     properties:
       mail:
         smtp:
@@ -57,10 +57,12 @@ spring:
 
 app:
   jwt:
-    secret: ${JWT_SECRET}
+    secret: bXlTZWNyZXRLZXkxMjM1Njc4cXdlcnR5dWlvcGpoZ2Zkc2ZnaGo5NGdmZXJ0eXVpbzIzNDVqZHM1a2poZ2ZkNDU3NjU0ZmdoZmQ=
     expiration-ms: 86400000
   frontend:
-    url: http://localhost:3000
+    url: http://127.0.0.1:5500
+  backend:
+    url: http://localhost:8081/api/auth
   email:
     from: samuelkunle.sk@gmail.com
   security:

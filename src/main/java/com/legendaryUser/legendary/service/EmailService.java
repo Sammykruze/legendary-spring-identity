@@ -26,6 +26,9 @@ public class EmailService {
     @Value("${app.frontend.url}")
     private String frontendUrl;
 
+    @Value("${app.backend.url}")
+    private String backendUrl;
+
     @Autowired
     private JavaMailSender mailSender;
 
